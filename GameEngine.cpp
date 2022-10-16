@@ -1,6 +1,5 @@
 #include "GameEngine.h"
 #include "Level.h"
-
 #include <iostream>
 #include <sstream>
 #include <conio.h>
@@ -10,6 +9,7 @@ using namespace std;
 
 GameEngine::GameEngine(string levelFilename) {
 	// Set up game
+	_gameOver = false;
 	_player.init(1, 100, 10, 10, 0);
 	_state = move; // Current player state - move controls
 
